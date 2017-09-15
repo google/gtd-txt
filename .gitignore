@@ -1,0 +1,10 @@
+# Editor backup files
+*~
+\#*
+.\#*
+.*.swp
+
+
+# Local Variables:
+# mode: conf
+# End:

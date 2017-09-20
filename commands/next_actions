@@ -22,4 +22,4 @@ common_awk '
     showWithFile($1)
   }
 ' "${GTD_TXT_DATA[@]}" \
-  | grep -F "$(join_by $'\n' "$@")"
+  | grep -F --binary-files=text "$(join_by $'\n' "$@")"

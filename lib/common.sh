@@ -13,7 +13,7 @@
 # limitations under the License.
 
 mapfile -t GTD_TXT_DATA < <(find "${GTD_TXT_REPOSITORY:-$HOME/gtd.txt/data}" \
-  -maxdepth 1 -type f -not -name '*~')
+  -regextype posix-extended -maxdepth 1 -type f -not -regex '.*(~|.swp)')
 GTD_TXT_DATA=("${GTD_TXT_DATA[@]}" /dev/null)  # ensure GTD_TXT_DATA is nonempty
 readonly GTD_TXT_DATA
 
